@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך התקנה מתקדם</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #000000, #4B0082);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px #8A2BE2;
+        }
+        .step {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .step h2 {
+            color: #FFA500;
+            margin-top: 0;
+        }
+        .command {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid #8A2BE2;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin-bottom: 10px;
+        }
+        .copy-btn {
+            background-color: #8A2BE2;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .copy-btn:hover {
+            background-color: #9932CC;
+        }
+        a {
+            color: #FFA500;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .whatsapp-cta {
+            background: #25D366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>מדריך התקנה מתקדם</h1>
+        
+        <div class="step">
+            <h2>1. הורדת GIT</h2>
+            <p>לחץ <a href="https://git-scm.com/downloads" target="_blank">כאן</a> להורדת GIT והתקן אותו.</p>
+        </div>
+        
+        <div class="step">
+            <h2>2. הורדת Node.js (v20.15.1)</h2>
+            <p>לחץ <a href="https://nodejs.org/download/release/v20.15.1/" target="_blank">כאן</a> להורדת Node.js והתקן אותו.</p>
+        </div>
+        
+        <div class="step">
+            <h2>3. הורדת pnpm (v9.4.0)</h2>
+            <p>הרץ את הפקודה הבאה ב-CMD או ב-PowerShell:</p>
+            <div class="command">npm install -g pnpm@9.4.0</div>
+            <button class="copy-btn" onclick="copyToClipboard('npm install -g pnpm@9.4.0')">העתק</button>
+        </div>
+        
+        <div class="step">
+            <h2>4. שיבוט המאגר</h2>
+            <div class="command">git clone https://github.com/coleam00/bolt.new-any-llm.git</div>
+            <button class="copy-btn" onclick="copyToClipboard('git clone https://github.com/coleam00/bolt.new-any-llm.git')">העתק</button>
+        </div>
+        
+        <div class="step">
+            <h2>5. התקנת תלויות</h2>
+            <div class="command">cd bolt.new-any-llm
+pnpm install</div>
+            <button class="copy-btn" onclick="copyToClipboard('cd bolt.new-any-llm\npnpm install')">העתק</button>
+        </div>
+        
+        <div class="step">
+            <h2>6. הגדרת קובץ הסביבה</h2>
+            <p>שנה את שם הקובץ .env.example ל-.env.local ופתח אותו לעריכה.</p>
+        </div>
+        
+        <div class="step">
+            <h2>7. הורדת Chrome Canary</h2>
+            <p>לחץ <a href="https://www.google.com/chrome/canary/" target="_blank">כאן</a> להורדת Chrome Canary והתקן אותו.</p>
+        </div>
+        
+        <div class="step">
+            <h2>8. הפעלת הפרויקט</h2>
+            <div class="command">npm run dev</div>
+            <button class="copy-btn" onclick="copyToClipboard('npm run dev')">העתק</button>
+        </div>
+        
+        <div class="step">
+            <h2>9. סיום</h2>
+            <p>כל הכבוד! השלמת את תהליך ההתקנה.</p>
+        </div>
+
+        <div class="whatsapp-cta">
+            <h2>אהבתם? נהנתם?</h2>
+            <p>הירשמו לערוץ הוואטסאפ הרשמי שלי!</p>
+            <a href="https://whatsapp.com/channel/0029VasSVV6ICVftHpIJaP1H" target="_blank" class="copy-btn">הצטרפו לערוץ</a>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('הועתק ללוח!');
+            }, function(err) {
+                console.error('שגיאה בהעתקה: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
